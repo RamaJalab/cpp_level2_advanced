@@ -1,30 +1,44 @@
 #include <iostream>
 using namespace std;
-void readfun(int a[10])
+void readfun(int a[2])
 {
   int i;
-  for ( i = 0; i < 10; i++)
+  for ( i = 0; i < 2; i++)
   {
 cout<<"Value of a  " <<i+1<<endl;
 cin>>a[i];
     /* code */
   }
 }
-void writefun(int a[10])
+void writefun(int a[2])
 {
   int i;
-  for (i = 0; i< 10; i++)
+  for (i = 0; i< 2; i++)
   {
 
 cout << "value of a  " <<i+1<< " = " << a[i]<<endl;
     /* code */  
   }
 }
+int increase(int &s)
+{
+  return (s++);
+}
+int decrease(int &m)
+{
+  return (m--);
+}
 int main()
 {
-int a[10];
+  int s=10;
+  int m=4;
+  int a[2];
 readfun(a);
 writefun(a);
+increase(s);
+decrease(m);
+cout<<"Value after increase s = " <<s<<endl;
+cout<<"Value after decrease m = " <<m<<endl;
    
     /* code */
     return 0;
